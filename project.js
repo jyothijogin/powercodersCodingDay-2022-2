@@ -1,41 +1,40 @@
 let quiz = [
     {
-        question:"question1",
-        answers:["answer1","answer2","answer3","answer4"],
-        correctAnswer:2,
-        shownBefore:false
+        question:"Which built-in method combines the text of two strings and returns a new string?",
+        answers:["attach()","append()","concat()","None of the above"],
+        correctAnswer:2
     },
     {
-        question:"question2",
-        answers:["answer1","answer2","answer3","answer4"],
-        correctAnswer:3,
-        shownBefore:false
+        question:"Which of the following function of Number object returns a string value version of the current number?",
+        answers:["toPrecision()","toLocaleString()","toFixed()","toString()"],
+        correctAnswer:3
     },
     {
-        question:"question3",
-        answers:["answer1","answer2","answer3"],
-        correctAnswer:2,
-        shownBefore:false
+        question:"Which of the following function of String object returns the calling string value converted to lower case?",
+        answers:["toLowerCase()","toLocaleLowerCase()","substring()"],
+        correctAnswer:0
     },
     {
-        question:"question4",
-        answers:["answer1","answer2","answer3","answer4"],
-        correctAnswer:2,
-        shownBefore:false
+        question:"Which of the following function of Array object joins all elements of an array into a string?",
+        answers:["concat()","join()","pop()","map()"],
+        correctAnswer:1
     },
     {
-        question:"question5",
-        answers:["answer1","answer2","answer3","answer4"],
-        correctAnswer:2,
-        shownBefore:false
+        question:"Which of the following function of Array object reverses the order of the elements of an array?",
+        answers:["reduceRight()","reduce()","push()","reverse()"],
+        correctAnswer:3
     }
 ]
 
 const NUMBEROFQUESTIONS = quiz.length;
 let questionOnTheScreen = -1;
+let count = 0;
+let score = 0;
 
 let questionSection = document.getElementById("questions");
 let questionTxt = document.getElementById("questionTxt");
+let message = document.getElementById("message");
+let scoreBoard = document.getElementById("scoreBoard");
 let answersTxt = document.querySelectorAll("#answers article");
 let answersArticle = document.getElementById("answers");
 
@@ -48,6 +47,8 @@ function showQuestion(){
     // if we get a random number already used we should generate again
     let randomNumber;
     let randomQuestion;
+    message.innerHTML = "";
+
     do {
         randomNumber = generateRandomIndex();
         randomQuestion = quiz[randomNumber];
@@ -57,6 +58,8 @@ function showQuestion(){
     questionOnTheScreen = randomNumber;
     questionTxt.innerHTML = randomQuestion.question;
     let answer;
+    answersArticle.innerHTML = "";
+    count++;
     for (let i = 0; i < randomQuestion.answers.length; i++) {
         answer = document.createElement("article");
         answer.innerHTML = randomQuestion.answers[i];
@@ -67,16 +70,33 @@ function showQuestion(){
 
 function answerClicked(index){
     if(quiz[questionOnTheScreen].correctAnswer == index){
-        alert("correct");
+        message.innerText = "Correct Answer 🤩";
+        score+= 10;
     }
-    showScore();
+    else {
+        message.innerText = "Oopps! Wrong Answer 🥺";
+    }
+}
+function showScore(){
+    let msg = "";
+    let percentage = score/NUMBEROFQUESTIONS * 100;
+    if(percentage <30){
+        msg = "Good luck next time!"
+    }   
+    else if(percentage<70){
+        msg = "Almost perfect!";
+    }else{
+        msg = "You are perfection!";
+    }
+    scoreBoard.innerText = "Your Final Score is " + score+"<br>"+msg;
 }
 function nextClicked(){
-    showQuestion();
-}
-
-function showScore(){
-
+    if(count != NUMBEROFQUESTIONS){
+        showQuestion();
+    }else if(count == NUMBEROFQUESTIONS){
+        //questionSection.setAttribute("style","display:none");
+        showScore();
+    }   
 }
 
 showQuestion();
