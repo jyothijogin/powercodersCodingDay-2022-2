@@ -1,16 +1,69 @@
-.questions{
-font-size: 2em;
-background-color: aquamarine;
-text-align: center;
+html {
+  box-sizing: border-box;
+  height: 100%;
 }
-.answers{
-display: inline-block;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
-.answers article{
-font-size: 1.6em;
-background-color: cadetblue;
+
+* {
+  margin: 0;
+  padding: 0;
 }
-.answers article:hover{
-    text-decoration: underline;
-    background-color: red;
+
+body {
+  font-family: "Helvetica", sans-serif;
+  margin: 10px;
+}
+
+.questions {
+  margin: 40px;
+  font-size: 2em;
+  text-align: center;
+}
+
+.questions > div {
+    margin-bottom: 30px;
+}
+
+.answers {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.answers > article {
+  font-size: 20px;
+  background-color: #325b5d;
+  color: white;
+  margin: 30px;
+  border-radius: 5px;
+  flex: 20em;
+  padding: 40px;
+}
+.answers article:hover {
+  background-color: #7ba7a9;
+}
+
+button {
+  background-color: #1c1a1b;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+    background-color: grey;
+}
+
+.button-wrapper {
+    text-align: right;
+    margin-right: 60px;
 }
