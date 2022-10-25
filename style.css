@@ -1,0 +1,16 @@
+.questions{
+font-size: 2em;
+background-color: aquamarine;
+text-align: center;
+}
+.answers{
+display: inline-block;
+}
+.answers article{
+font-size: 1.6em;
+background-color: cadetblue;
+}
+.answers article:hover{
+    text-decoration: underline;
+    background-color: red;
+}
