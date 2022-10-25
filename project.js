@@ -79,7 +79,7 @@ function answerClicked(index){
 }
 function showScore(){
     let msg = "";
-    let percentage = score/NUMBEROFQUESTIONS * 100;
+    let percentage = score/NUMBEROFQUESTIONS * 10;
     if(percentage <30){
         msg = "Good luck next time!"
     }   
@@ -88,7 +88,7 @@ function showScore(){
     }else{
         msg = "You are perfection!";
     }
-    scoreBoard.innerText = "Your Final Score is " + score+"<br>"+msg;
+    scoreBoard.innerText = "Your Final Score is " + score+" - "+msg;
 }
 function nextClicked(){
     if(count != NUMBEROFQUESTIONS){
