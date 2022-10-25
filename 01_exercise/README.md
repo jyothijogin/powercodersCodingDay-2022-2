@@ -1,26 +1,28 @@
-## Team work
+# Powercoders Coding Day
+Coding Day 2022-2 / Powercoders Switzerland bootcamp<br><br>
 
-Build a simple quiz in HTML, CSS and JavaScript. 
-Add at least 5 questions to your quiz. Each question has 3-4 possible answers, where only 1 is correct. 
-The questions should be about something you learned during the Powercoders bootcamp. 
+First part / Morning: Group work – exercises n°01<br>
+Second part / Afternoon: Individual work – exercises n°02 to 08<br>
 
-Minimum features:
-- show the questions in random order one after the other in the HTML
-- let the user select an answer and give immediate feedback (right or wrong)
-- let the user go to the next question
-- at the end of the quiz show the score and give a message depending on the score (e.g. You are a genius / You seem to have a bad day)
+1. Fork the powercoders/coding_day repo from Github
 
-What to think of:
-- design: how does it look like / does it work on mobile? get some ideas online.
-- additional features: can you make it more fun or easier to use?
-- how to make the quiz semantically correct
+   **Make sure you forked it! Do not overwrite the orginal repo.**
 
-Team work:
-- discuss together what you have to do
-- split the tasks (in pairs or single responsibles)
-- put your code together and on GitHub
-- present your quiz at the end of the morning (5 to 10 min per group / every team member has to say something)
+2. Pull the forked repo to a local coding_day repo
 
-Estimated time: 2 hours 30 minutes <br>
-plus presentation: 5 to 10 minutes <br>
-Total points: 280
+3. Read every exercise's README carefully, before you start coding.
+
+4. Morning: Exercise 01 is group work
+
+4. Afternoon: Best to read the exercises (n°02 to n°08) first and check the estimated times, before you start.
+
+5. Commit every exercise to your local repo, **NOT** Github.
+
+
+
+**At 12:30 pm sharp (for the first part) and 4.00 pm sharp (for the second part) push your whole repo to Github and add the link to the repo when you turn in the Google Classroom assignment. Please include your name in the repo name.**
+
+
+Morning points: 280 <br>
+Afternoon points: 195 <br>
+**Total points: 475**

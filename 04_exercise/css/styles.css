@@ -5,7 +5,7 @@ h1 {
   color: #dae4e9;
   letter-spacing: -.015em;
   font-weight: 700;
-  font-size: 16vmin;
+  font-size: 10vmin;
   font-family: 'Arimo', cursive;
   line-height: 1;
 }
@@ -30,6 +30,10 @@ p {
 html, body {
   margin: 0;
   padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  
 }
 
 body {
@@ -42,6 +46,7 @@ section {
 
 main {
   padding: 2vh 4vw;
+  
 }
 
 img {
@@ -61,12 +66,15 @@ picture {
 .fig-2 {
   display: none;
 }
-
+#textRed {
+  color: #a52a2a;
+}
 @supports (display: grid) {
   /* Text Elements */
 
   h1 {
     grid-area: title;
+    text-align: center;
   }
 
   /* Layout Elements */
@@ -82,7 +90,7 @@ picture {
 
   main {
     display: grid;
-
+    
     grid-column-gap: 2vw;
   }
 
